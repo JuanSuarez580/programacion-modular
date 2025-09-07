@@ -1,0 +1,33 @@
+Funcion dato_pisodeseado<-tomar_pisodeseado
+	Escribir "Digite el piso al que desea ir[1-10]"
+	Leer dato_pisodeseado
+FinFuncion
+Funcion dato_verificar<-analizar_valido
+	piso_deseado<-tomar_pisodeseado
+	Si piso_deseado>=1 y piso_deseado<=10 Entonces
+		Escribir "El piso es valido"
+	SiNo
+		Escribir "Error: El piso no es valido"
+	Fin Si
+FinFuncion
+Funcion dato_temperatura<-tomar_temperatura
+	Escribir "Digite la temperatura del ascensor"
+	Leer dato_temperatura
+FinFuncion
+Funcion dato_verificart<-analizar_validot
+	temperatura_ascensor<-tomar_temperatura
+	Si temperatura_ascensor>=18 y temperatura_ascensor<=25 Entonces
+		Escribir "El ascensor esta en la temperatura adecuada, Iniciando"
+	SiNo
+		Escribir "La temperatura esta fuera del rango deseado"
+	Fin Si
+FinFuncion
+Funcion dato_mensaje<-crear_mensaje
+	dato_mensaje<-analizar_valido()+analizar_validot
+FinFuncion
+Funcion mostrar_mensaje
+	Escribir crear_mensaje()
+FinFuncion
+Algoritmo sin_titulo
+	mostrar_mensaje()
+FinAlgoritmo
